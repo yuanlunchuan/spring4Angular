@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.websystique.springmvc")
-public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
+public class HelloWorldConfiguration extends WebMvcConfigurerAdapter {
 	
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
@@ -22,10 +22,10 @@ public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
 		viewResolver.setSuffix(".jsp");
 		registry.viewResolver(viewResolver);
 	}
-
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
 	}
-
+	
 }
